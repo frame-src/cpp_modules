@@ -6,7 +6,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 SDIR = src
 ODIR = obj
 
-SRC = /src/megaphone.cpp \
+SRC = \src\phonebook.cpp \
 OBJ = $(SRC:.cpp=.o)
 
 .ccp.o:

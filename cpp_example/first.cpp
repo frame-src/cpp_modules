@@ -1,28 +1,23 @@
 #include <iostream>
 
-std::string	upperCase(std::string str){
-	int i = 0;
-	while(str[i]){
-		str[i] = toupper(str[i]);
-		i++;
-	}
-	return str;
-}
-
 int main (int argc, char *argv[]){
 
-	int i = 1;
+	int i = 1, j = 0;
 
 	if(argc == 1){
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+		return 0;
 	} else {
 		while(i < argc){
-			std::cout << upperCase(argv[i]);
+			j = 0;
+			while(argv[i][j]){
+				argv[i][j] = toupper(argv[i][j]);
+				j++;
+			}
+			sdt::cout << toupper(argv[i]);
 			i++;
-			if(argv[i])
-				std::cout << " ";
 		}
-		std::cout << std::endl;
+		std::endl;
 	}
 	//std::cout << "MEGAPHONEEEEEEEE" <<std::end1;	return 10;
 	return 0;
