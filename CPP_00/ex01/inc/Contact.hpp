@@ -20,8 +20,8 @@ public:
 	Contact(void);
 	~Contact(void);
 
-	Contact contact_settings(void);
-	//get_contact();
+	Contact	contact_settings(void);
+	void	get_contact(Contact);
 };
 
 #endif

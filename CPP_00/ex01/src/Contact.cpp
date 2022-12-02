@@ -19,17 +19,29 @@ Contact Contact::contact_settings(void)
 {
 	for (int i = 0; i <= 4; i++)
 	{
-		std::cout << "Insert the" << Contact::fields_name[i] << ":\n";
-		std::getline(std::cin, Contact::Contact.columns[i]);
+		std::cout << "Insert the" << Contact::fields[i] << ":\n";
+		std::getline(std::cin, Contact::columns[i]);
+		if(Contact::columns[i].lenght() == 0){
+			std::cout << "!ATTENTION! no empty field!" << std::endl;
+			--i;
+		if(Contact::columns[i] == "EXIT")
+			return (NULL);
+		}
 	}
-	size_t totalLength = 0;
-	for (int i = FirstName; i <= Secret; i++)
-		totalLength += this->informations[i].length();
-	if (totalLength == 0)
+	std::cout << "Contact added !" << std::endl;
+	return (Contact);
+}
+
+void Contact::get_contact(Contact::contact)
+{
+	std::cout << "|" << std::setw(10) << this->index;
+	for (int i = 0; i <= 3; i++)
 	{
-		std::cout << "# Empty contact not added !" << std::endl;
-		return (false);
+		std::cout << "|";
+		if (Contact:contact.columns[i].length() > 10)
+			std::cout << Contact:contact.columns[i].substr(0, 9) << ".";
+		else
+			std::cout << std::setw(10) << Contact:contact.columns[i];
 	}
-	std::cout << "# Contact added !" << std::endl;
-	return (true);
+	std::cout << "|" << std::endl;	
 }
