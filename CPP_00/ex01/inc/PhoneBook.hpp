@@ -5,6 +5,7 @@
 #include <string>
 #include <iomanip>
 #include <cstdlib>
+#include <iostream>
 #include "Contact.hpp"
 /*
 -   array of contacts;
@@ -18,12 +19,11 @@ class PhoneBook {
 		bool	noSpace;
 
 	public:
-		PhoneBook(void){
-			index	= 0;
-			noSpace	= false;
-		}
+		PhoneBook(void);
 		~PhoneBook();
-		
+
+	Contact	add_new_contact(void);
+	void	search_contact(void);
 };
 
 #endif

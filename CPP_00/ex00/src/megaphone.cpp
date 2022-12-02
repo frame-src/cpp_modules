@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cctype>
 
 std::string	upperCase(std::string str){
 	int i = 0;
@@ -24,6 +25,5 @@ int main (int argc, char *argv[]){
 		}
 		std::cout << std::endl;
 	}
-	//std::cout << "MEGAPHONEEEEEEEE" <<std::end1;	return 10;
 	return 0;
 }

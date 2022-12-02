@@ -1,13 +1,21 @@
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(void){
-    return ;
+	index = 0;
+	noSpace = false;
 }
 
-~PhoneBook::PhoneBook(void){
-    return ;
+PhoneBook::~PhoneBook(void){
 }
 
-void    PhoneBook::insert_contact_PhoneBook
-
-void    PhoneBook::get_contact_PhoneBook
+Contact PhoneBook::add_new_contact(void){
+	if(index == 8){
+		if(noSpace == false)
+			noSpace = true;
+		index = 0;
+	}
+	if(noSpace = true)
+		std::cout<<"memory full, we are gonna overwrite" << index + 1 << std::endl;
+	phonebook::contacts[index] = contact.contact_settings();
+	++index;
+}

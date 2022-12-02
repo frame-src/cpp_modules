@@ -11,6 +11,7 @@
 */
 class Contact {
 private:
+	static std::string	fields[5];
 	std::string columns[5];
 	std::string info[11];
 	int index;
@@ -19,8 +20,34 @@ public:
 	Contact(void);
 	~Contact(void);
 
-	set_contact();
-	get_contact();
+	Contact contact_settings(void);
+	//get_contact();
 };
 
 #endif
+
+/*
+	classes are kind of data struct in C;
+	classes can be init as class, struct, or union
+	the difference between class and struct is the default access level;
+	
+	``` c++
+	class class_name {
+  		access_specifier_1:
+    	member1;
+  		access_specifier_2:
+    	member2;
+  		...
+	} object_names;
+	```
+
+	object_names: is an optional list of names for the objects of this class;
+	for example:
+	class_name -> Triangle
+	object_names -> rectangle, isoscele, equilatero, scaleno.
+
+	members: this can be data or function declarations.
+
+	access specifiers: private or public for example.
+
+*/
