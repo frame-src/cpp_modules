@@ -4,11 +4,11 @@
 
 Contact::Contact(void)
 {
-	this->fields[0] = "name";
-	this->fields[1] = "last name";
-	this->fields[2] = "nickname";
-	this->fields[3] = "phone number";
-	this->fields[4] = "darkest secret";
+	this->fields_name[0] = "Name";
+	this->fields_name[1] = "Last name";
+	this->fields_name[2] = "Nickname";
+	this->fields_name[3] = "Phone number";
+	this->fields_name[4] = "Darkest secret";
 }
 
 Contact::~Contact(void)
@@ -19,8 +19,8 @@ void Contact::contact_settings(void)
 {
 	for (int i = 0; i <= 4; i++)
 	{
-		std::cout << "Insert the" << this->fields[i] << ":\n";
-		std::getline(std::cin, this->fields[i]);
+		std::cout << "Insert the " << this->fields_name[i] << ":\n";
+		std::cin >> this->fields[i];
 		if(this->fields[i].length() == 0)
 		{
 			std::cout << "!ATTENTION! no empty field!" << std::endl;

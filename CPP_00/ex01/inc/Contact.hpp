@@ -12,6 +12,7 @@
 */
 class Contact {
 private:
+	std::string		fields_name[5];
 	std::string		fields[5];
 
 public:
