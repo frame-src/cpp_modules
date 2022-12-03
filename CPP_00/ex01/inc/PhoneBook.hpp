@@ -12,11 +12,11 @@
 -   max size 8;
 -   if maximum size is reached add the 9th replacing the "oldest";
 */
-class PhoneBook {
+class PhoneBook{
 	private:
-		Contact contacts[8];
+		Contact	contacts[8];
 		int		index;
-		bool	noSpace;
+		bool	noSpaceLeft;
 
 	public:
 		PhoneBook(void);

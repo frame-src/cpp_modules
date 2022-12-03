@@ -1,5 +1,6 @@
 #include "PhoneBook.hpp"
 
+std::string ;
 PhoneBook::PhoneBook(void){
 	index = 0;
 	noSpace = false;
@@ -15,7 +16,7 @@ Contact PhoneBook::add_new_contact(void){
 		index = 0;
 	}
 	if(noSpace = true)
-		std::cout<<"memory full, we are gonna overwrite" << index + 1 << std::endl;
+		std::cout<< "memory full, we are gonna overwrite" << index + 1 << std::endl;
 	phonebook::contacts[index] = contact.contact_settings();
 	++index;
 }

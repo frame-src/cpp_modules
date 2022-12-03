@@ -17,11 +17,12 @@ Contact::~Contact(){
 
 Contact Contact::contact_settings(void)
 {
+	Contact contact;
 	for (int i = 0; i <= 4; i++)
 	{
 		std::cout << "Insert the" << Contact::fields[i] << ":\n";
 		std::getline(std::cin, Contact::columns[i]);
-		if(Contact::columns[i].lenght() == 0){
+		if(Contact::columns[i].length() == 0){
 			std::cout << "!ATTENTION! no empty field!" << std::endl;
 			--i;
 		if(Contact::columns[i] == "EXIT")
@@ -41,7 +42,7 @@ void Contact::get_contact(Contact::contact)
 		if (Contact:contact.columns[i].length() > 10)
 			std::cout << Contact:contact.columns[i].substr(0, 9) << ".";
 		else
-			std::cout << std::setw(10) << Contact:contact.columns[i];
+			std::cout << std::setw(10) << Contact::contact.columns[i];
 	}
-	std::cout << "|" << std::endl;	
+	std::cout << "|" << std::endl;
 }

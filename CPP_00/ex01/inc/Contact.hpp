@@ -12,9 +12,9 @@
 class Contact {
 private:
 	static std::string	fields[5];
-	std::string columns[5];
-	std::string info[11];
-	int index;
+	std::string			columns[5];
+	std::string			info[11];
+	int					index;
 
 public:
 	Contact(void);
