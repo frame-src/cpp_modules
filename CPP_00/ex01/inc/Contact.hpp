@@ -21,6 +21,7 @@ public:
 
 	void	contact_settings(void);
 	void	get_contact_info(void);
+	void	print_table( int index);
 };
 
 #endif

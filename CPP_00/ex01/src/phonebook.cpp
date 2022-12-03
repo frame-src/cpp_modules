@@ -29,20 +29,26 @@ void	PhoneBook::add_new_contact(void)
 void	PhoneBook::search_contact(void)
 {
 	std::string		arg;
-	int				index;
+	int				index = 0;
+
 	bool garbage = true;
-	while(garbage == true)
+
+	for ( int i = 0; i < 8; i++)
+		this->contacts[i].print_table(i);
+	while (garbage == true)
 	{
 		std::cout << "Enter the Contact index: " << std::endl;
 		std::cin >> arg;
-		if(isdigit(arg[0]) && arg.length() < 2)
+		if (arg == "EXIT")
+			return ;
+		if (isdigit(arg[0]) && arg.length() < 2)
 		{
 			index = stoi(arg);
-			if(index < 8 && index >= 0)
+			if(index < 9 && index >= 1)
 				garbage = false;
 		}
-		if(garbage == true)
-		std::cout << "pls no garbage: 0 <= ONLY 1 DIGIT < 8" << std::endl;
+		if (garbage == true)
+		std::cout << "pls no garbage: 0 < ONLY 1 DIGIT < 9" << std::endl;
 	}
-	this->contacts[index].get_contact_info();
+	this->contacts[index -1].get_contact_info();
 }

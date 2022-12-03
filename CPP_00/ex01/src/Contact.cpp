@@ -42,3 +42,41 @@ void Contact::get_contact_info(void)
 	}
 	std::cout << "|" << std::endl;
 }
+
+void Contact::print_table(int index)
+{
+	int		j;
+
+	j = 0;
+	if(index == 0)
+	{
+		while(j < 4)
+		{
+			if(j == 0)
+				std::cout << "#0|";
+			else
+				std::cout << "|";
+			if (this->fields_name[j].length() > 10)
+				std::cout << this->fields_name[j].substr(0, 10);
+			else
+				std::cout << std::setw(10) << this->fields_name[j];
+			std::cout << "|";
+			if(j == 3)
+				std::cout << std::endl;
+			j++;
+		}
+	}
+	j = 0;
+	while(j < 4)
+	{
+		if(j == 0)
+				std::cout <<"#" << index + 1 << "|";
+			else
+				std::cout << "|";
+		std::cout << std::setw(10) << this->fields[j];
+		std::cout << "|";
+		if(j == 3)
+			std::cout << std::endl;
+		j++;
+	}
+}
