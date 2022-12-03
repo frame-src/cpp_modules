@@ -1,48 +1,44 @@
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
+#include "../inc/Contact.hpp"
+#include <iostream>
+#include <iomanip>
 
-Contact::Contact(){
-	std::string Contact::fields[5] =
-	{
-		"name",
-		"last name",
-		"nickname",
-		"phone number",
-		"darkest secret"
-	};
-}
-
-Contact::~Contact(){
-}
-
-Contact Contact::contact_settings(void)
+Contact::Contact(void)
 {
-	Contact contact;
+	this->fields[0] = "name";
+	this->fields[1] = "last name";
+	this->fields[2] = "nickname";
+	this->fields[3] = "phone number";
+	this->fields[4] = "darkest secret";
+}
+
+Contact::~Contact(void)
+{
+}
+
+void Contact::contact_settings(void)
+{
 	for (int i = 0; i <= 4; i++)
 	{
-		std::cout << "Insert the" << Contact::fields[i] << ":\n";
-		std::getline(std::cin, Contact::columns[i]);
-		if(Contact::columns[i].length() == 0){
+		std::cout << "Insert the" << this->fields[i] << ":\n";
+		std::getline(std::cin, this->fields[i]);
+		if(this->fields[i].length() == 0)
+		{
 			std::cout << "!ATTENTION! no empty field!" << std::endl;
 			--i;
-		if(Contact::columns[i] == "EXIT")
-			return (NULL);
 		}
 	}
 	std::cout << "Contact added !" << std::endl;
-	return (Contact);
 }
 
-void Contact::get_contact(Contact::contact)
+void Contact::get_contact_info(void)
 {
-	std::cout << "|" << std::setw(10) << this->index;
 	for (int i = 0; i <= 3; i++)
 	{
 		std::cout << "|";
-		if (Contact:contact.columns[i].length() > 10)
-			std::cout << Contact:contact.columns[i].substr(0, 9) << ".";
+		if (this->fields[i].length() > 10)
+			std::cout << this->fields[i].substr(0, 9) << ".";
 		else
-			std::cout << std::setw(10) << Contact::contact.columns[i];
+			std::cout << std::setw(10) << this->fields[i];
 	}
 	std::cout << "|" << std::endl;
 }

@@ -1,4 +1,4 @@
-NAME = megaphone
+NAME = phonebook
 
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
@@ -6,7 +6,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 SDIR = src
 ODIR = obj
 
-SRC = ./src/phonebook.cpp ./src/main.cpp ./src/phonebook.cpp\
+SRC = ./src/Contact.cpp ./src/main.cpp ./src/phonebook.cpp\
 
 OBJ = $(SRC:.cpp=.o)
 

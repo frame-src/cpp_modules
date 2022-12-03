@@ -16,13 +16,13 @@ class PhoneBook{
 	private:
 		Contact	contacts[8];
 		int		index;
-		bool	noSpaceLeft;
+		bool	noSpace;
 
 	public:
 		PhoneBook(void);
 		~PhoneBook();
 
-	Contact	add_new_contact(void);
+	void	add_new_contact(void);
 	void	search_contact(void);
 };
 

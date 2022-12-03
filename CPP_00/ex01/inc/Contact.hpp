@@ -1,6 +1,7 @@
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
+#include <string>
 /*
 -	4 columns: INDEX, FIRST NAME, SECOND NAME, NICKNAME, DARKESTSECRET;
 -	each column is 10 char wide;
@@ -11,17 +12,14 @@
 */
 class Contact {
 private:
-	static std::string	fields[5];
-	std::string			columns[5];
-	std::string			info[11];
-	int					index;
+	std::string		fields[5];
 
 public:
 	Contact(void);
 	~Contact(void);
 
-	Contact	contact_settings(void);
-	void	get_contact(Contact);
+	void	contact_settings(void);
+	void	get_contact_info(void);
 };
 
 #endif
