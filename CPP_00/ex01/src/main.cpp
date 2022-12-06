@@ -6,10 +6,8 @@ int main ()
 	
 	std::string    arg;
 	std::cout << "Hello, this is a really special PhoneBook: \n pls insert a contact with ADD, search with SEARCH or EXIT." << std::endl;
-	while(1)
+	while(std::getline(std::cin, arg))
 	{
-		
-		std::cin >> arg;
 		if ( arg == "ADD"){
 			std::cout << "Ok. Give me something to ADD;" << std::endl;
 			phonebook.add_new_contact();

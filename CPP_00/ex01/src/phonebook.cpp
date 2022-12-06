@@ -35,10 +35,9 @@ void	PhoneBook::search_contact(void)
 
 	for ( int i = 0; i < 8; i++)
 		this->contacts[i].print_table(i);
-	while (garbage == true)
+	std::cout << "Enter the Contact index: " << std::endl;
+	while (std::getline(std::cin, arg) && garbage == true)
 	{
-		std::cout << "Enter the Contact index: " << std::endl;
-		std::cin >> arg;
 		if (arg == "EXIT")
 			return ;
 		if (isdigit(arg[0]) && arg.length() < 2)
@@ -50,5 +49,6 @@ void	PhoneBook::search_contact(void)
 		if (garbage == true)
 		std::cout << "pls no garbage: 0 < ONLY 1 DIGIT < 9" << std::endl;
 	}
+	if(arg != "\0")
 	this->contacts[index -1].get_contact_info();
 }

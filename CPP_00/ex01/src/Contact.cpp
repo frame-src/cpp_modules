@@ -17,15 +17,22 @@ Contact::~Contact(void)
 
 void Contact::contact_settings(void)
 {
+	std::string arg;
 	for (int i = 0; i <= 4; i++)
 	{
 		std::cout << "Insert the " << this->fields_name[i] << ":\n";
-		std::cin >> this->fields[i];
-		if(this->fields[i].length() == 0)
+		while(std::getline(std::cin, arg))
 		{
-			std::cout << "!ATTENTION! no empty field!" << std::endl;
-			--i;
+			this->fields[i] = arg;
+			if(this->fields[i].length() == 0)
+			{
+				std::cout << "!ATTENTION! no empty field!" << std::endl;
+				--i;
+			}
+			break;
 		}
+		if(arg == "\0")
+			return;
 	}
 	std::cout << "Contact added !" << std::endl;
 }
@@ -73,7 +80,10 @@ void Contact::print_table(int index)
 				std::cout <<"#" << index + 1 << "|";
 			else
 				std::cout << "|";
-		std::cout << std::setw(10) << this->fields[j];
+		if (this->fields_name[j].length() > 10)
+				std::cout << this->fields_name[j].substr(0, 10);
+		else
+			std::cout << std::setw(10) << this->fields[j];
 		std::cout << "|";
 		if(j == 3)
 			std::cout << std::endl;
