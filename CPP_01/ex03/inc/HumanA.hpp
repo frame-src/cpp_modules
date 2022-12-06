@@ -10,6 +10,7 @@ class HumanA
 	private:
 		std::string	name;
 		Weapon		&weapon;
+		bool		equipped;
 
 	public:
 		HumanA (std::string name, Weapon &weapon);

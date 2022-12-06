@@ -10,10 +10,12 @@
 HumanA::HumanA(std::string name, Weapon &weapon) : weapon(weapon)
 {
 	this->name = name;
+	this->equipped = true;
 }
 
 HumanA::~HumanA()
 {
+	this->equipped = false;
 }
 
 void HumanA::attack( void )
@@ -33,6 +35,7 @@ void HumanA::attack( void )
 void HumanA::setHumanWeapon(Weapon &weapon)
 {
 	this->weapon = weapon;
+	this->equipped = true;
 }
 
 std::string HumanA::getHumanWeapon()

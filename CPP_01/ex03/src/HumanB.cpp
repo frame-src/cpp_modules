@@ -2,11 +2,13 @@
 
 HumanB::HumanB()
 {
+	this->equipped = false;
 }
 
 HumanB::HumanB(std::string const name)
 {
 	this->name = name;
+	this->equipped = false;
 }
 
 HumanB::~HumanB()
@@ -15,9 +17,9 @@ HumanB::~HumanB()
 
 void HumanB::attack( void )
 {
-	if((this->weapon->getWeaponType()).empty())
+	if(this->equipped == false || !this->weapon)
 	{
-		std::cout << this->name << " attacks with their BAREHANDS " << this->weapon->getWeaponType();
+		std::cout << this->name << " attacks with their BAREHANDS ";
 		std::cout << std::endl;
 	}
 	else
@@ -30,6 +32,7 @@ void HumanB::attack( void )
 void HumanB::setHumanWeapon(Weapon &weapon)
 {
 	this->weapon = &weapon;
+	this->equipped = true;
 }
 
 std::string HumanB::getHumanWeapon()

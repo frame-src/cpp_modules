@@ -10,6 +10,7 @@ class HumanB
 	private:
 		std::string		name;
 		Weapon			*weapon;
+		bool			equipped;
 
 	public:
 		HumanB (std::string name);

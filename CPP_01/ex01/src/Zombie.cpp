@@ -3,10 +3,12 @@
 Zombie::Zombie(std::string const name)
 {
 	this->name = name;
+	this->known = true;
 }
 
 Zombie::Zombie()
 {
+	this->known = false;
 }
 
 Zombie::~Zombie()
@@ -17,11 +19,15 @@ Zombie::~Zombie()
 
 void Zombie::announce( void )
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ...";
-	std::cout << std::endl;
+	if(this->known == true)
+	{
+		std::cout << this->name << ": BraiiiiiiinnnzzzZ...";
+		std::cout << std::endl;
+	}
 }
 
 void Zombie::setZombieName( std::string zombieName )
 {
 	this->name = zombieName;
+	this->known = true;
 }

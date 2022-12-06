@@ -27,8 +27,10 @@ int main (int argc, char *argv[])
 	std::fstream	newFile;
 	size_t			index;
 
-	if (argc != 4 && wrongInput(argv[1], argv[2], argv[3]))
-			return -1;
+	if( argc != 4 || wrongInput(argv[1], argv[2], argv[3])){
+		std::cout << "pls insert: [filename] [string to find] [string to place]" << std::endl;
+			return (-1);
+	}
 	s1 = argv[2];
 	s2 = argv[3];
 	fileName = argv[1];
@@ -46,7 +48,7 @@ int main (int argc, char *argv[])
 					while( index != -1) 
 						{
 							str = str.substr(0,index) + s2 + str.substr(index + s1.length(), str.length() - (index + s1.length()));
-							index = str.find(s1);
+							index = str.find(s1, index + s2.length());
 						}
 					}
 				if(file.eof())
