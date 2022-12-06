@@ -50,6 +50,12 @@
 		"tuple": "cpp",
 		"type_traits": "cpp",
 		"typeinfo": "cpp",
-		"utility": "cpp"
-	}
+		"utility": "cpp",
+		"__split_buffer": "cpp",
+		"vector": "cpp",
+		"deque": "cpp",
+		"fstream": "cpp",
+		"stack": "cpp"
+	},
+	"C_Cpp.errorSquiggles": "Disabled"
 }
