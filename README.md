@@ -34,4 +34,10 @@ https://www.ibm.com/docs/en/zos/2.4.0?topic=only-overloading-increment-decrement
 fixed point conversion : 
 https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/
 https://stackoverflow.com/questions/187713/converting-floating-point-to-fixed-point
-fixed
+
+Ex03: Overview of BSP
+https://www.geeksforgeeks.org/binary-space-partitioning/
+Triangle solution:
+https://www.geeksforgeeks.org/check-whether-a-given-point-lies-inside-a-triangle-or-not/;
+
+CPP

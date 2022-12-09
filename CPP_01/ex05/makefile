@@ -4,18 +4,17 @@ CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SDIR = src
-ODIR = obj
 
 SRC = ./src/main.cpp \
 	  ./src/Harl.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 
-.ccp.o:
-	$(CC) $(FLAGS) $< - o $(<:.cpp=.o)
+%.o: $(SDIR)%.cpp
+	$(CC) $(FLAGS) $^ -c
 
-$(NAME): $(OBJ) $(SRC)
-	$(CC) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(FLAGS) $^ -o $(NAME)
 
 all: $(NAME)
 
