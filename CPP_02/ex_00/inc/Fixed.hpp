@@ -22,7 +22,7 @@ class Fixed {
 		~Fixed();
 		Fixed &operator=(const Fixed &other);
 		int getRawBits(void) const;    // returns the raw value of the fixed-point value.
-		void setRawBits(int const rawBits);
+		void setRawBits(int const raw);
 };
 #endif
 /*
