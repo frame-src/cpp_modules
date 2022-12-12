@@ -5,12 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 15:50:18 by frmessin          #+#    #+#             */
-/*   Updated: 2022/12/10 16:29:32 by frmessin         ###   ########.fr       */
+/*   Created: 2022/12/12 13:54:32 by frmessin          #+#    #+#             */
+/*   Updated: 2022/12/12 13:54:33 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../inc/ScavTrap.hpp"
 #include "../inc/ClapTrap.hpp"
+#include "../inc/FragTrap.hpp"
 
 ClapTrap::ClapTrap() : name("NO ID"), hitPoints(10), energyPoints(10), attackDamage(0) {
 
@@ -64,14 +66,19 @@ void ClapTrap::beRepaired(unsigned int amount) {
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
+	if(this->hitPoints == 0)
+		return;
 	int newAmount = this->hitPoints - amount;
 	if(newAmount > 0) {
 		std::cout << this->name << " Have " << newAmount << " Health left" << std::endl;
+		this->hitPoints = newAmount;
 	} else {
 		std::cout << this->name << " Received " << amount << " damage" << std::endl;
 		std::cout << this->name << " * IS DEAD *" << std::endl;
 		this->energyPoints = 0;
+		this->hitPoints = 0;
 	}
+	
 }
 
 std::string ClapTrap::getName() const {

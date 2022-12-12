@@ -5,11 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 15:50:18 by frmessin          #+#    #+#             */
-/*   Updated: 2022/12/10 16:29:32 by frmessin         ###   ########.fr       */
+/*   Created: 2022/12/12 13:54:12 by frmessin          #+#    #+#             */
+/*   Updated: 2022/12/12 13:54:13 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../inc/ScavTrap.hpp"
 #include "../inc/ClapTrap.hpp"
 
 ClapTrap::ClapTrap() : name("NO ID"), hitPoints(10), energyPoints(10), attackDamage(0) {
@@ -72,6 +73,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
 		std::cout << this->name << " * IS DEAD *" << std::endl;
 		this->energyPoints = 0;
 	}
+	this->hitPoints = newAmount;
 }
 
 std::string ClapTrap::getName() const {

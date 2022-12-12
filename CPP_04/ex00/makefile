@@ -1,11 +1,12 @@
-NAME = fixed
+NAME = animals
 
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SDIR = src
 
-SRC = ./src/Fixed.cpp ./src/main.cpp ./src/Point.cpp ./src/bsp.cpp
+SRC =	./src/Animal.cpp ./src/Dog.cpp \
+		./src/Cat.cpp ./src/main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
