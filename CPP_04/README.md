@@ -38,6 +38,34 @@ The function would automatically call the overridden "doSomething" function in t
 
 So virtual classes in C++ are a powerful tool for supporting polymorphism and writing more flexible and reusable code. They are particularly useful when working with large and complex object-oriented code bases.
 
+STRING ALLOCATE:
+std::string is just a normal class, defined as:
+```cpp
+namespace std
+{
+    typedef std::basic_string<char> string;
+};
+```
+so it's a synonym for the instantiation of the basic_string template class for characters of type char.
 
+It means the usual rules apply:
+	1#	When the std::string objects is stored on the stack, as globals, as class members you don't need to do anything special,
+	when they go out of scope their destructor is called, and it takes care of freeing the memory used for the string automatically.
+```cpp
+	void ideas()
+	{
+		string ideas[100];
+		// no need to do anything, mystring goes out of scope and everything is cleaned up automatically
+	}
+```
+	2# When the std::string object is stored on the heap using the "new" operator, then, as any object allocated with new, you need to call "delete" and free it;
+```cpp
+	void ideas()
+	{
+		string *ideas = new string[100];
+		delete ideas;
+		// delete is doing the same of free() in c;
+	}
+```
 
 https://www.simplilearn.com/tutorials/cpp-tutorial/abstract-class-in-cpp#:~:text=An%20abstract%20class%20in%20C%2B%2B,class%20in%20its%20own%20right.

@@ -74,6 +74,9 @@ bool	Fixed::operator>=(Fixed const &other) const {
 bool	Fixed::operator==(Fixed const &other) const {
 	return(this->fixedPoint == other.fixedPoint);
 }
+bool	Fixed::operator!=(Fixed const &other) const {
+	return(!(this->fixedPoint == other.fixedPoint));
+}
 /*			+, -, *, and / Overload				*/
 Fixed Fixed::operator+(Fixed const &other) {
 	Fixed tmp(*this);
@@ -94,6 +97,8 @@ Fixed Fixed::operator*(Fixed const &other) {
 }
 
 Fixed Fixed::operator/(Fixed const &other) {
+	if(other.getRawBits() == 0)
+		return(*this);
 	Fixed tmp(*this);
 	tmp.setRawBits((this->getRawBits() * (1 << this->bits))/ other.getRawBits());
 	return (tmp);

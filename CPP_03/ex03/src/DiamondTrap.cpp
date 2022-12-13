@@ -6,7 +6,7 @@
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 13:55:16 by frmessin          #+#    #+#             */
-/*   Updated: 2022/12/12 13:55:17 by frmessin         ###   ########.fr       */
+/*   Updated: 2022/12/13 12:06:41 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ DiamondTrap::DiamondTrap() : ClapTrap(), FragTrap(), ScavTrap() {
 	std::cout << "Diamond Trap is created without an ID, should only display one Default Constructor of the Clap Trap" << std::endl;
 }
 
-DiamondTrap :: DiamondTrap(std::string name) : ClapTrap(name), FragTrap(name) , ScavTrap(name) {
+DiamondTrap :: DiamondTrap(std::string name) : ClapTrap(name), FragTrap(name + "frag") , ScavTrap( name + "scav") {
 	this->name = name;
 	ClapTrap::name = this->name + "_clap_name";
 	this->hitPoints = FragTrap::hitPoints;

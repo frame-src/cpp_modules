@@ -6,7 +6,7 @@
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:21:05 by frmessin          #+#    #+#             */
-/*   Updated: 2022/12/12 15:38:30 by frmessin         ###   ########.fr       */
+/*   Updated: 2022/12/13 14:54:44 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Dog : public Animal {
 
 	private:
 		std::string	type;
-	
+
 	public:
 		Dog();
 		Dog(std::string type);
@@ -30,8 +30,8 @@ class Dog : public Animal {
 		Dog &operator=(Dog const &other);
 		~Dog();
 
-		void makeSound();
-		std::string getType();
+		void makeSound() const;
+		std::string getType() const;
 };
 
 #endif

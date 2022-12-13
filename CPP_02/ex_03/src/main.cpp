@@ -8,7 +8,6 @@ int main() {
 	Point b(10, 30);
 	Point c(20, 0);
 	Point P(30, 15);
-
 	if (bsp(a, b, c, P))
 		std::cout << "Yes, it is inside" << std::endl;
 	else

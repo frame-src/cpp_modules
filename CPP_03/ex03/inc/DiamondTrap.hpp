@@ -6,7 +6,7 @@
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 13:54:53 by frmessin          #+#    #+#             */
-/*   Updated: 2022/12/12 13:54:54 by frmessin         ###   ########.fr       */
+/*   Updated: 2022/12/13 12:13:42 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ This ensures that only a single copy of the base class is inherited, even if it 
 
 Overall, the diamond problem is a potential issue to be aware of when using multiple inheritance, and it is important to design your inheritance hierarchies carefully to avoid conflicts.
 */
-class DiamondTrap : public ScavTrap, public FragTrap
+class DiamondTrap : virtual public ScavTrap, virtual public FragTrap
 {
 private:
 	std::string name;

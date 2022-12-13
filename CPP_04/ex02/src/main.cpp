@@ -6,7 +6,7 @@
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:16:20 by frmessin          #+#    #+#             */
-/*   Updated: 2022/12/13 15:34:00 by frmessin         ###   ########.fr       */
+/*   Updated: 2022/12/13 15:39:23 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,6 @@
 #include "../inc/Dog.hpp"
 #include "../inc/Cat.hpp"
 #include "../inc/Brain.hpp"
-
-// int main()
-// {
-// const Animal* j = new Dog();
-// const Animal* i = new Cat();
-// delete j;//should not create a leak
-// delete i;
-// system("leaks animals");
-// return 0;
-// }
 
 int main()
 {

@@ -6,7 +6,7 @@
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 13:59:15 by frmessin          #+#    #+#             */
-/*   Updated: 2022/12/12 22:06:35 by frmessin         ###   ########.fr       */
+/*   Updated: 2022/12/13 14:22:35 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ Animal::~Animal() {
 	;
 }
 
-std::string Animal::getType() {
+std::string Animal::getType() const{
 	return this->type;
 }
 
-void Animal::makeSound() {
+void Animal::makeSound() const{
 	std::cout << " *** NO SOUND *** " << std::endl;
 }

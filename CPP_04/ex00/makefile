@@ -6,6 +6,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 SDIR = src
 
 SRC =	./src/Animal.cpp ./src/Dog.cpp \
+		./src/WrongAnimal.cpp ./src/WrongCat.cpp \
 		./src/Cat.cpp ./src/main.cpp
 
 OBJ = $(SRC:.cpp=.o)

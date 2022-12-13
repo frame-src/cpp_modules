@@ -28,6 +28,7 @@ class Fixed {
 		bool		operator<=(Fixed const &other) const;
 		bool		operator>=(Fixed const &other) const;
 		bool		operator==(Fixed const &other) const;
+		bool		operator!=(Fixed const &other) const;
 
 		/*			algebric operator			*/
 		Fixed		operator+(Fixed const &other);

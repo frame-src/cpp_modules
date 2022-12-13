@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 22:05:40 by frmessin          #+#    #+#             */
-/*   Updated: 2022/12/13 15:09:19 by frmessin         ###   ########.fr       */
+/*   Created: 2022/12/12 13:53:49 by frmessin          #+#    #+#             */
+/*   Updated: 2022/12/13 16:57:17 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_H
-#define BRAIN_H
+#ifndef AANIMAL_H
+#define AANIMAL_H
 
 #include <string>
-#include <iostream> 
+#include <iostream>
 
-class Brain {
-	private: 
-		std::string ideas[100];
+class AAnimal {
+
+	protected:
+		std::string	type;
+	
 	public:
-		Brain();
-		Brain(const Brain &other);
-		Brain &operator=(const Brain &other);
-		~Brain();
+		AAnimal();
+		AAnimal(std::string type);
+		AAnimal(Animal const &other);
+		AAnimal &operator=(Animal const &other);
+		virtual ~AAnimal();
 
-		void setIdea(std::string idea, int index);
-		std::string getIdea(int index) const;
+		virtual void makeSound() const;
+		virtual std::string getType() const = 0;
+
 };
 
 #endif

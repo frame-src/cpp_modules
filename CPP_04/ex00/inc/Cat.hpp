@@ -6,10 +6,9 @@
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 14:04:12 by frmessin          #+#    #+#             */
-/*   Updated: 2022/12/12 15:38:22 by frmessin         ###   ########.fr       */
+/*   Updated: 2022/12/13 14:55:26 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef CAT_H
 #define CAT_H
@@ -31,9 +30,8 @@ class Cat : public Animal {
 		Cat &operator=(Cat const &other);
 		~Cat();
 
-		void makeSound();
-		void whoAmI();
-		std::string getType();
+		void makeSound() const;
+		std::string getType() const;
 };
 
 #endif

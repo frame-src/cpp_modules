@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 22:05:40 by frmessin          #+#    #+#             */
-/*   Updated: 2022/12/13 15:09:19 by frmessin         ###   ########.fr       */
+/*   Created: 2022/12/12 13:59:15 by frmessin          #+#    #+#             */
+/*   Updated: 2022/12/13 16:57:04 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_H
-#define BRAIN_H
+#include "../inc/AAnimal.hpp"
 
-#include <string>
-#include <iostream> 
+Animal::Animal() {
+	this->type = "unknown";
+}
 
-class Brain {
-	private: 
-		std::string ideas[100];
-	public:
-		Brain();
-		Brain(const Brain &other);
-		Brain &operator=(const Brain &other);
-		~Brain();
+Animal::Animal(std::string type) {
+	this->type = type;
+}
 
-		void setIdea(std::string idea, int index);
-		std::string getIdea(int index) const;
-};
+Animal::~Animal() {
+	;
+}
 
-#endif
+std::string Animal::getType() const{
+	return this->type;
+}
+
+void Animal::makeSound() const{
+	std::cout << " *** NO SOUND *** " << std::endl;
+}

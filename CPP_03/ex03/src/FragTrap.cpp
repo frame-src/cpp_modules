@@ -6,7 +6,7 @@
 /*   By: frmessin <frmessin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 13:55:21 by frmessin          #+#    #+#             */
-/*   Updated: 2022/12/12 13:55:22 by frmessin         ###   ########.fr       */
+/*   Updated: 2022/12/13 12:10:10 by frmessin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../inc/ScavTrap.hpp"
 #include "../inc/ClapTrap.hpp"
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name) {
+FragTrap::FragTrap(std::string name) {
 	std::cout << "Hello hello. Default Constructor FragTrap constructor for ID: " << name << std::endl;
 	this->name = name;
 	this->hitPoints = 100;
@@ -22,7 +22,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name) {
 	this->attackDamage = 30;
 }
 
-FragTrap::FragTrap() : ClapTrap() {
+FragTrap::FragTrap() {
 	std::cout << "Hello hello. Default Constructor FragTrap constructor for no ID." << std::endl;
 	this->name = "NO FragTrapTrapID";
 	this->hitPoints = 100;
